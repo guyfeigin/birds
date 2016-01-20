@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_weight="0"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:layout_alignRight="@id/image"
+    android:layoutDirection="rtl"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_width="150dp"
+
+        android:layout_height="150dp"
+        android:src="@drawable/baz"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+
+        android:layout_gravity="center_vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/list_item_Bird_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="טריסטמית"
+            style="@android:style/TextAppearance.Large"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/list_item_BirdFamily_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.Medium"
+            android:text="טורפים" />
+
+    </LinearLayout>
+
+</LinearLayout>
