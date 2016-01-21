@@ -106,5 +106,7 @@ public class PickerActivityFragmentOld extends Fragment implements AdapterView.O
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
-    public void testAddtoGit(){}
+    public void testAddtoGit(){
+        int i = i++;
+    }
 }
