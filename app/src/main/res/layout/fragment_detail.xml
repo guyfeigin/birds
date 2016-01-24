@@ -55,7 +55,7 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-
+<!--
     <ImageView
         android:src="@drawable/baz"
         android:id="@+id/Bird_Image"
@@ -63,6 +63,7 @@
 
         android:layout_width="300dp"
         android:layout_height="300dp" />
+        -->
     <TextView
         android:layoutDirection="rtl"
 

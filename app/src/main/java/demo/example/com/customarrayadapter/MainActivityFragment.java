@@ -54,11 +54,12 @@ public class MainActivityFragment extends Fragment {
     private void initDataInAdapter() {
         birdList.clear();
         birdList.add(new BirdsType("טריסטמית", "ציפורי שיר", R.drawable.tristams, "tristamit.html",
-                new int[]{R.drawable.tristams, R.drawable.tristams, R.drawable.tristams}, "שחור", "בקעה"));
+                new int[]{R.drawable.tristams, R.drawable.tristams1, R.drawable.tristams2}, "שחור", "בקעה"));
         birdList.add(new BirdsType("בולבול", "ציפורי שיר", R.drawable.spectacled_bulbul,
-                "bulbul.html",new int[] {R.drawable.spectacled_bulbul,R.drawable.tristams,R.drawable.tristams},"לבן","צפון"));
-        birdList.add(new BirdsType("סיקסאק", "חופמאים", R.drawable.spur_winged_lapwing,"",
-                new int[] {R.drawable.spur_winged_lapwing,R.drawable.tristams,R.drawable.tristams},"שחור","מרכז"));
+                "bulbul.html",new int[] {R.drawable.spectacled_bulbul,R.drawable.bulbul1,R.drawable.bulbul2,R.drawable.bulbul3,
+                R.drawable.bulbul3, R.drawable.bulbul4,R.drawable.bulbul5},"לבן","צפון"));
+        birdList.add(new BirdsType("סיקסאק", "חופמאים", R.drawable.spur_winged_lapwing,"siksak.html",
+                new int[] {R.drawable.spur_winged_lapwing,R.drawable.siksak,R.drawable.siksak2,R.drawable.siksak3},"שחור","מרכז"));
         birdList.add(new BirdsType("עורבני", "ציפורי שיר\"", R.drawable.orvani, "orvani.html"
                 , new int[]{R.drawable.spectacled_bulbul, R.drawable.tristams, R.drawable.tristams}, "כחול", "מרכז"));
         birdList.add(new BirdsType("טריסטמית", "ציפורי שיר", R.drawable.tristams, "tristamit.html",

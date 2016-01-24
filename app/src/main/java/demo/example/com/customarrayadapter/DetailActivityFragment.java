@@ -45,9 +45,9 @@ public class DetailActivityFragment extends Fragment {
                        String birdfNameStr = intent.getStringExtra("family");
                        ((TextView) rootView.findViewById(R.id.Bird_fName))
                                .setText(birdfNameStr);
-                       int birdImage = intent.getIntExtra("image", 0);
+                      /* int birdImage = intent.getIntExtra("image", 0);
                        ((ImageView) rootView.findViewById(R.id.Bird_Image))
-                               .setImageResource(birdImage);
+                               .setImageResource(birdImage);*/
                        String birdDescriptionStr = intent.getStringExtra("Description");
                        ((TextView) rootView.findViewById(R.id.Bird_Description))
                                .setText(birdDescriptionStr);
