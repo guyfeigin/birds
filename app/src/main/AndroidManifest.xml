@@ -35,6 +35,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="demo.example.com.customarrayadapter.MainActivity" />
         </activity>
+        <activity
+            android:name=".FamilyActivity"
+            android:label="@string/title_activity_family"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

@@ -20,4 +20,5 @@
         <item>אילת</item>
         <item>מדבר יהודה</item>
     </string-array>
+    <string name="title_activity_family">FamilyActivity</string>
 </resources>

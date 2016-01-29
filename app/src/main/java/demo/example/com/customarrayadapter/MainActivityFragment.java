@@ -112,7 +112,7 @@ public class MainActivityFragment extends Fragment {
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                               Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         //MyBirdsAdapter = new BirdsAdapter(getActivity(), Arrays.asList(Birds));
@@ -127,12 +127,15 @@ public class MainActivityFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 BirdsType tempBird = MyBirdsAdapter.getItem(position);
                 // Toast.makeText(getActivity(), tempBird.BirdName, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                /*Intent intent = new Intent(getActivity(), DetailActivity.class);
                 intent.putExtra("name", tempBird.BirdName);
                 intent.putExtra("family", tempBird.BirdFamily);
                 intent.putExtra("image", tempBird.image);
                 intent.putExtra("Description", tempBird.Description);
                 intent.putExtra("pics", tempBird.pics);
+                startActivity(intent);*/
+                Intent intent = new Intent(getActivity(), FamilyActivity.class);
+                intent.putExtra("familyName", tempBird.BirdName);
                 startActivity(intent);
             }
         });

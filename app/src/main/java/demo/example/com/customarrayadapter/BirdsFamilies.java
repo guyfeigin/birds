@@ -5,8 +5,32 @@ import java.util.ArrayList;
 /**
  * Created by myuser on 27/01/2016.
  */
-public class BirdsFamilies {
+public class BirdsFamilies  {
+    public static class tarnegolaim
+    {
+        public ArrayList<BirdsType> initFamily () {
+            ArrayList<BirdsType> birdList = new ArrayList<BirdsType>();
+            birdList.add(new BirdsType("חוגלת סלעים", "תרנגולאים", R.drawable.hoglatslaim, "hoglatSlaim.html",
+                    new int[]{R.drawable.hoglatslaim,R.drawable.hoglatslaim1,R.drawable.hoglatslaim2}, "חום", ""));
+            birdList.add(new BirdsType("קורא מידברי ", "תרנגולאים", R.drawable.koremidbari, "koreMidbari.html",
+                    new int[]{R.drawable.koremidbari,R.drawable.koremidbari1,R.drawable.koremidbari2,R.drawable.koremidbari3}, "חום", "דרום"));
+            birdList.add(new BirdsType(" פרנקולין שחור ", "תרנגולאים", R.drawable.frankolinshahor, "frankolinShahor.html",
+                    new int[]{R.drawable.frankolinshahor1,R.drawable.frankolinshahor2,R.drawable.frankolinshahor3,R.drawable.frankolinshahor4}, "שחור", "עמק הירדן"));
+            birdList.add(new BirdsType("  שליו נודד ", "תרנגולאים", R.drawable.slavnoded, "slavNoded.html",
+                    new int[]{R.drawable.slavnoded}, "חום", " "));
 
+            return birdList;
+    }
+    }
+    public static class zolelanim
+    {
+        public ArrayList<BirdsType> initFamily () {
+            ArrayList<BirdsType> birdList = new ArrayList<BirdsType>();
+            birdList.add(new BirdsType("צוללן אדום גרון ", "צוללנים", R.drawable.zolelanadomgaron, "",
+                    new int[]{R.drawable.zolelanadomgaron}, "", ""));
+            return birdList;
+        }
+    }
     public static class Families
 
     {
