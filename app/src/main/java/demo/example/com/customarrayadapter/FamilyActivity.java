@@ -25,8 +25,8 @@ public class FamilyActivity extends AppCompatActivity {
         else {
             familyList = savedInstanceState.getParcelableArrayList("family");
         }
-
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+/*
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -36,7 +36,8 @@ public class FamilyActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
+        */
         MyBirdsAdapter = new BirdsAdapter(this, familyList);
         // Get a reference to the ListView, and attach this adapter to it.
         ListView listView = (ListView) findViewById(R.id.listview_family);
@@ -75,11 +76,11 @@ public class FamilyActivity extends AppCompatActivity {
             {
                 case "צוללנים":
                     BirdsFamilies.zolelanim zolelanim = new BirdsFamilies.zolelanim();
-                    familyList = zolelanim.initFamily();
+                    zolelanim.initFamily(familyList);
                     break;
                 case "תרנגולאים":
                     BirdsFamilies.tarnegolaim tarnegolaim = new BirdsFamilies.tarnegolaim();
-                    familyList = tarnegolaim.initFamily();
+                    tarnegolaim.initFamily(familyList);
                     break;
 
             }

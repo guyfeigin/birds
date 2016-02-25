@@ -9,6 +9,9 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="label_pick_color">בחר צבע הציפור</string>
     <string name="title_activity_picker">אפשרויות בחירה</string>
+    <string name="title_activity_family">משפחה</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
     <string-array name="areas">
         <item></item>
         <item>צפון</item>
@@ -20,5 +23,15 @@
         <item>אילת</item>
         <item>מדבר יהודה</item>
     </string-array>
-    <string name="title_activity_family">FamilyActivity</string>
+
+    <string-array name="planets_array">
+    <item>משתמש</item>
+    <item>כניסה</item>
+    <item>מיון וסינון</item>
+    <item>שלח הערות</item>
+    <item>אודות</item>
+    <item>אחרונים</item>
+    <item>תמונות</item>
+    <item>מצלילים</item>
+</string-array>
 </resources>

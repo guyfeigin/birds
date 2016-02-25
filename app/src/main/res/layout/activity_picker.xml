@@ -24,13 +24,68 @@
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_dialog_email" /-->
-    <TextView android:layout_width="match_parent" android:layout_height="45dp"
-        android:text="@string/label_pick_color" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/label_pick_color"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="שחור"
+        android:id="@+id/checkBoxBlack"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="חום"
+        android:id="@+id/checkBoxBrown"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="לבן"
+        android:id="@+id/checkBoxWhite"
+       />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="אדום"
+        android:id="@+id/checkBoxRed"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="צהוב"
+        android:id="@+id/checkBoxYellow"
+         />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ירוק"
+        android:id="@+id/checkBoxGreen"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="כחול"
+        android:id="@+id/checkBoxBlue"
+        />
+<!--
     <Spinner
-        android:layout_width="match_parent"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerColor"
-        android:layout_gravity="right" />
+        android:layout_gravity="top|right"
+        android:gravity="right"
+        android:textAlignment="gravity"
+        android:dropDownSelector="@color/accent_material_dark" />-->
 
     <TextView
         android:layout_width="fill_parent"
@@ -39,10 +94,83 @@
         android:text="אזור בארץ"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal|right" />
-
+<!--
     <Spinner
-        android:layout_width="match_parent"
+        android:textDirection="rtl"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerAreas"
-        android:layout_gravity="right" />
+        android:layout_gravity="right" />-->
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="צפון"
+        android:id="@+id/checkBoxNorth"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="רמת הגולן"
+        android:id="@+id/checkBoxGolan"
+        android:layout_weight="1"
+        android:layout_marginRight="20dp" />
+    <CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="מרכז"
+    android:id="@+id/checkBoxCenter"
+        android:layout_weight="1" />
+</LinearLayout>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="נגב"
+        android:id="@+id/checkBoxNegev"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ערבה"
+        android:id="@+id/checkBoxArava"
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="נקה"
+            android:id="@+id/buttonClean"
+            android:layout_weight="0"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="בחר"
+            android:id="@+id/buttonChoose"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:layout_margin="2dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="בטל"
+            android:id="@+id/buttonCancle"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:layout_margin="2dp" />
+    </LinearLayout>
+
+
 </LinearLayout>

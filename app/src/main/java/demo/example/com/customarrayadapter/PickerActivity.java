@@ -1,44 +1,31 @@
 package demo.example.com.customarrayadapter;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PickerActivity extends AppCompatActivity {
-    private SharedPreferences mPrefs;
-    private String color;
-    private String area;
     Spinner spinnerArea;
     Spinner spinnerColor;
+    String area="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_picker);
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
-
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+        /*
         spinnerArea = (Spinner) findViewById(R.id.spinnerAreas);
         spinnerColor = (Spinner) findViewById(R.id.spinnerColor);
         addSpinnerColors();
-        addSpinnerAreas();
+        addSpinnerAreas();*/
         Intent intent = getIntent();
-
+/*
         String color = intent.getStringExtra("Color");
         String area = intent.getStringExtra("Area");
         spinnerColor.setSelection(((ArrayAdapter)spinnerColor.getAdapter()).getPosition(color));
@@ -102,10 +89,18 @@ public class PickerActivity extends AppCompatActivity {
     @Override
     public void finish() {
         // Prepare data intent
-        String color = spinnerColor.getSelectedItem().toString();
-        String area = spinnerArea.getSelectedItem().toString();
+        /*String color = spinnerColor.getSelectedItem().toString();
+        String area = spinnerArea.getSelectedItem().toString();*/
         Intent returnIntent = new Intent();
-        returnIntent.putExtra("SelectedColor", color);
+        returnIntent.putExtra("ColorBlack", ((CheckBox)findViewById(R.id.checkBoxBlack)).isChecked());
+        returnIntent.putExtra("ColorBrown", ((CheckBox)findViewById(R.id.checkBoxBrown)).isChecked());
+        returnIntent.putExtra("ColorWhite", ((CheckBox)findViewById(R.id.checkBoxWhite)).isChecked());
+        returnIntent.putExtra("ColorRed", ((CheckBox)findViewById(R.id.checkBoxRed)).isChecked());
+        returnIntent.putExtra("ColorYellow", ((CheckBox)findViewById(R.id.checkBoxYellow)).isChecked());
+        returnIntent.putExtra("ColorGreen", ((CheckBox)findViewById(R.id.checkBoxGreen)).isChecked());
+        returnIntent.putExtra("ColorBlue", ((CheckBox)findViewById(R.id.checkBoxBlue)).isChecked());
+
+        //returnIntent.putExtra("SelectedColor", color);
         returnIntent.putExtra("SelectedArea", area);
         setResult(RESULT_OK, returnIntent);
         super.finish();

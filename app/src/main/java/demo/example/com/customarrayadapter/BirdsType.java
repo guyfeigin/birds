@@ -13,18 +13,18 @@ public class BirdsType implements Parcelable {
     String Description;
     //int pic1,pic2,pic3;
     int[] pics;
-    String color;
-    String area;
+    String[] colors;
+    String[] areas;
 
-    public BirdsType(String vName, String vNumber, int image,String Description,int[] pics,String color,String area)
+    public BirdsType(String vName, String vNumber, int image,String Description,int[] pics,String[] color,String[] area)
     {
         this.BirdName = vName;
         this.BirdFamily = vNumber;
         this.image = image;
         this.Description=Description;
         this.pics = pics;
-        this.color = color;
-        this.area = area;
+        this.colors = color;
+        this.areas = area;
 //        this.pic1 = pic1;
 //        this.pic2 = pic2;
 //        this.pic3 = pic3;
@@ -35,8 +35,8 @@ public class BirdsType implements Parcelable {
         image = in.readInt();
         Description = in.readString();
         pics = in.createIntArray();
-        color=in.readString();
-        area=in.readString();
+        colors=in.createStringArray();
+        areas=in.createStringArray();
 /*        pic1 = in.readInt();
         pic2 = in.readInt();
         pic3 = in.readInt();*/
@@ -54,8 +54,8 @@ public class BirdsType implements Parcelable {
         parcel.writeInt(image);
         parcel.writeString(Description);
         parcel.writeIntArray(pics);
-        parcel.writeString(color);
-        parcel.writeString(area);
+        parcel.writeStringArray(colors);
+        parcel.writeStringArray(areas);
         /*parcel.writeInt(pic1);
         parcel.writeInt(pic2);
         parcel.writeInt(pic3);*/
