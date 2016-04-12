@@ -1,8 +1,7 @@
-package demo.example.com.customarrayadapter;
-
+/*
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,20 +9,64 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import demo.example.com.customarrayadapter.BirdsAdapter;
+import demo.example.com.customarrayadapter.BirdsFamilies;
+import demo.example.com.customarrayadapter.BirdsType;
+import demo.example.com.customarrayadapter.FamilyActivity;
+import demo.example.com.customarrayadapter.PickerActivity;
+import demo.example.com.customarrayadapter.R;
+
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import demo.example.com.customarrayadapter.BirdsAdapter;
+import demo.example.com.customarrayadapter.BirdsFamilies;
+import demo.example.com.customarrayadapter.BirdsType;
+import demo.example.com.customarrayadapter.FamilyActivity;
+import demo.example.com.customarrayadapter.PickerActivity;
+import demo.example.com.customarrayadapter.R;
+
+imimport android.support.v4.widget.DrawerLayout;
+        port android.view.LayoutInflater;
+        i*mport android.support.v4.widget.DrawerLayout;
+        /package demo.example.com.customarrayadapter;
+
+*/
 /**
  * A fragment containing the list view of Android versions.
- */
+ *//*
+
 public class MainActivityFragment extends Fragment {
     static final int PICK_COLOR_REQUEST = 1;  // The request code
-    private  BirdsAdapter MyBirdsAdapter;
+    private BirdsAdapter MyBirdsAdapter;
     private ArrayList<BirdsType> birdList= new ArrayList<BirdsType>();
     String color="",area="";
+    private String[] mPlanetTitles;
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
     //private ArrayList<BirdsType> Birds = new ArrayList<BirdsType>();
 
     public MainActivityFragment() {
@@ -55,7 +98,8 @@ public class MainActivityFragment extends Fragment {
         birdList.clear();
         BirdsFamilies.Families families = new BirdsFamilies.Families();
         birdList = families.initFamilies();
-        /*birdList.add(new BirdsType("טריסטמית", "ציפורי שיר", R.drawable.tristams, "tristamit.html",
+        */
+/*birdList.add(new BirdsType("טריסטמית", "ציפורי שיר", R.drawable.tristams, "tristamit.html",
                 new int[]{R.drawable.tristams, R.drawable.tristams1, R.drawable.tristams2}, "שחור", "בקעה"));
         birdList.add(new BirdsType("בולבול", "ציפורי שיר", R.drawable.spectacled_bulbul,
                 "bulbul.html",new int[] {R.drawable.spectacled_bulbul,R.drawable.bulbul1,R.drawable.bulbul2,R.drawable.bulbul3,
@@ -80,7 +124,8 @@ public class MainActivityFragment extends Fragment {
         birdList.add(new BirdsType("סיקסאק", "חופמאים", R.drawable.spur_winged_lapwing,"",
                 new int[] {R.drawable.spur_winged_lapwing,R.drawable.tristams,R.drawable.tristams},"שחור",""));
         birdList.add(new BirdsType("עורבני", "ציפורי שיר\"", R.drawable.orvani,"orvani.html"
-                ,new int[] {R.drawable.spectacled_bulbul,R.drawable.tristams,R.drawable.tristams},"כחול",""));*/
+                ,new int[] {R.drawable.spectacled_bulbul,R.drawable.tristams,R.drawable.tristams},"כחול",""));*//*
+
 
 
     }
@@ -113,7 +158,7 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_mainold, container, false);
 
         //MyBirdsAdapter = new BirdsAdapter(getActivity(), Arrays.asList(Birds));
         MyBirdsAdapter = new BirdsAdapter(getActivity(), birdList);
@@ -127,19 +172,42 @@ public class MainActivityFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 BirdsType tempBird = MyBirdsAdapter.getItem(position);
                 // Toast.makeText(getActivity(), tempBird.BirdName, Toast.LENGTH_SHORT).show();
-                /*Intent intent = new Intent(getActivity(), DetailActivity.class);
+                */
+/*Intent intent = new Intent(getActivity(), DetailActivity.class);
                 intent.putExtra("name", tempBird.BirdName);
                 intent.putExtra("family", tempBird.BirdFamily);
                 intent.putExtra("image", tempBird.image);
                 intent.putExtra("Description", tempBird.Description);
                 intent.putExtra("pics", tempBird.pics);
-                startActivity(intent);*/
+                startActivity(intent);*//*
+
                 Intent intent = new Intent(getActivity(), FamilyActivity.class);
                 intent.putExtra("familyName", tempBird.BirdName);
                 startActivity(intent);
             }
         });
+        //
+        mPlanetTitles = getResources().getStringArray(R.array.planets_array);
+        mDrawerLayout = (DrawerLayout) getActivity().findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) getActivity().findViewById(R.id.left_drawer);
 
+        // Set the adapter for the list view
+        mDrawerList.setAdapter(new ArrayAdapter<String>(getActivity(),
+                R.layout.drawer_list_item, mPlanetTitles));
+        // Set the list's click listener
+        mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent intent = new Intent(getActivity(), PickerActivity.class);
+                intent.putExtra("Color","");
+                intent.putExtra("Area","");
+                startActivityForResult(intent, PICK_COLOR_REQUEST);
+                mDrawerLayout.closeDrawer(mDrawerList);
+            }
+        });
+        //
         return rootView;
     }
     @Override
@@ -178,12 +246,14 @@ public class MainActivityFragment extends Fragment {
             area=myArea;
             Toast.makeText(getActivity(), "color : " + " " + color + "area" + area, Toast.LENGTH_LONG).show();
 
-           /* birdList.clear();
-            MyBirdsAdapter.notifyDataSetChanged();*/
+           */
+/* birdList.clear();
+            MyBirdsAdapter.notifyDataSetChanged();*//*
+
             initDataInAdapter();
             setDataOnAdapter(color, area);
             //MyBirdsAdapter.notifyDataSetChanged();
 
         }
     }
-}
+}*/

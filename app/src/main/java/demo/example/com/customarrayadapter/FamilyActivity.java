@@ -82,6 +82,19 @@ public class FamilyActivity extends AppCompatActivity {
                     BirdsFamilies.tarnegolaim tarnegolaim = new BirdsFamilies.tarnegolaim();
                     tarnegolaim.initFamily(familyList);
                     break;
+                case "טבלנים":
+                    BirdsFamilies.tavlanim tavlanim = new BirdsFamilies.tavlanim();
+                    tavlanim.initFamily(familyList);
+                    break;
+                case "יסעוראים":
+                    BirdsFamilies.yasuraim yasuraim = new BirdsFamilies.yasuraim();
+                    yasuraim.initFamily(familyList);
+                    break;
+                case "אווזאים":
+                    BirdsFamilies.avazaim avazaim = new BirdsFamilies.avazaim();
+                    avazaim.initFamily(familyList);
+                    break;
+
 
             }
 

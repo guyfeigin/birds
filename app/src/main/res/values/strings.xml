@@ -25,13 +25,8 @@
     </string-array>
 
     <string-array name="planets_array">
-    <item>משתמש</item>
-    <item>כניסה</item>
     <item>מיון וסינון</item>
     <item>שלח הערות</item>
     <item>אודות</item>
-    <item>אחרונים</item>
-    <item>תמונות</item>
-    <item>מצלילים</item>
 </string-array>
 </resources>

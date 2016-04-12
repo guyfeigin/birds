@@ -25,17 +25,17 @@ import java.io.Writer;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class DetailActivityFragment extends Fragment {
+public class DetailActivityFragmentOld extends Fragment {
 
     private int[] images; // = new Integer[3]; // = {R.drawable.baz, R.drawable.spectacled_bulbul, R.drawable.orvani};
 
-    public DetailActivityFragment() {
+    public DetailActivityFragmentOld() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_detailold, container, false);
         // The detail Activity called via intent.  Inspect the intent for forecast data.
                    Intent intent = getActivity().getIntent();
                    if (intent != null && intent.hasExtra("name")) {

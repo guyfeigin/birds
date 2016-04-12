@@ -25,6 +25,47 @@ public class BirdsFamilies  {
         public void initFamily (ArrayList<BirdsType> birdList) {
             birdList.add(new BirdsType("צוללן אדום גרון ", "צוללנים", R.drawable.zolelanadomgaron, "",
                     new int[]{R.drawable.zolelanadomgaron}, new String[]{"שחור"}, new String[]{"צפון"}));
+            birdList.add(new BirdsType("צוללן שחור גרון ", "צוללנים", R.drawable.zolelanshorgaron, "zolelanShhorGaron.html",
+                    new int[]{R.drawable.zolelansh1,R.drawable.zolelansh2
+                    ,R.drawable.zolelansh3}, new String[]{"שחור"}, new String[]{"אילת"}));
+        }
+    }
+    public static class tavlanim
+    {
+        public void initFamily (ArrayList<BirdsType> birdList) {
+            birdList.add(new BirdsType("  טבלן גמדי ", "טבלנים", R.drawable.tavlangamadi1, "",
+                    new int[]{R.drawable.tavlangamadi1,R.drawable.tavlangamadi2,R.drawable.tavlangamadi3,R.drawable.tavlangamadi4,
+                    R.drawable.tavlangamadi5}, new String[]{"שחור"}, new String[]{"צפון","מרכז"}));
+            birdList.add(new BirdsType("טבלן אפור-לחיים", "טבלנים", R.drawable.tavlanaforlehayayim1, "",
+                    new int[]{R.drawable.tavlanaforlehayayim1,R.drawable.tavlanaforlehayayim2,
+                            R.drawable.tavlanaforlehayayim3,R.drawable.tavlanaforlehayayim4}, new String[]{"שחור"}, new String[]{"אילת"}));
+        }
+    }
+    public static class yasuraim
+    {
+        public void initFamily (ArrayList<BirdsType> birdList) {
+            birdList.add(new BirdsType("יסעור גדול", "יסעוראים", R.drawable.yasurgadol, "yasurGadol.html",
+                    new int[]{R.drawable.yasurgadol2,R.drawable.yasurgadol3,R.drawable.yasurgadol4}, new String[]{"שחור"}, new String[]{"",""}));
+            birdList.add(new BirdsType("יסעור כהה", "יסעוראים", R.drawable.yasurkehe, "yasurKehe.html",
+                    new int[]{R.drawable.yasurkehe1,R.drawable.yasurkehe2,
+                            R.drawable.yasurkehe3,R.drawable.yasurkehe4}, new String[]{"שחור"}, new String[]{"אילת"}));
+            birdList.add(new BirdsType(" יסעור מצוי", "יסעוראים", R.drawable.yasurmazuy, "yasurMazuy.html",
+                    new int[]{R.drawable.yasurmazuy}, new String[]{"שחור"}, new String[]{""}));
+            birdList.add(new BirdsType(" יסעורון אטלנטי ", "יסעוראים", R.drawable.yasuronatlanty, "yasurAtlanty.html",
+                    new int[]{R.drawable.yasuronatlanty}, new String[]{"שחור"}, new String[]{""}));
+        }
+    }
+    public static class avazaim
+    {
+        public void initFamily (ArrayList<BirdsType> birdList) {
+
+            birdList.add(new BirdsType(" אווז לבן מצח", "אווזאים", R.drawable.avazlavanmezah, "avazLavanMezah.html",
+                    new int[]{R.drawable.avazlavanmezah,R.drawable.avazlavanmezah1}, new String[]{"לבן"}, new String[]{"",""}));
+            birdList.add(new BirdsType("אווז קטן", "אווזאים", R.drawable.avazkatan, "avazKatan.html",
+                    new int[]{R.drawable.avazkatan,R.drawable.avazkatan1}, new String[]{"לבן"}, new String[]{"",""}));
+            birdList.add(new BirdsType("אווז אחו ", "אווזאים", R.drawable.avazahu, "avazAhu.html",
+                    new int[]{R.drawable.avazahu,R.drawable.avazahu1,R.drawable.avazahu2,R.drawable.avazahu3,
+                            R.drawable.avazahu4}, new String[]{""}, new String[]{"",""}));
         }
     }
     public static class Families

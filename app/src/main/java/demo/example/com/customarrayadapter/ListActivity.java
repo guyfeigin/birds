@@ -184,6 +184,12 @@ public class ListActivity extends AppCompatActivity {
         tarnegolaim.initFamily(birdList);
         BirdsFamilies.zolelanim zolelanim = new BirdsFamilies.zolelanim();
         zolelanim.initFamily(birdList);
+        BirdsFamilies.tavlanim tavlanim = new BirdsFamilies.tavlanim();
+        tavlanim.initFamily(birdList);
+        BirdsFamilies.yasuraim yasuraim = new BirdsFamilies.yasuraim();
+        yasuraim.initFamily(birdList);
+        BirdsFamilies.avazaim avazaim = new BirdsFamilies.avazaim();
+        avazaim.initFamily(birdList);
 
     }
 }

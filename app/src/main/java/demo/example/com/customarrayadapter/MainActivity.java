@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 2) {
+                if (position == 0) {
                     Intent intent = new Intent(getApplication(), PickerActivity.class);
                     intent.putExtra("ColorBlack", colorBlack);
                     intent.putExtra("ColorBrown", colorBrown);
@@ -145,6 +145,11 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("Area", area);
                     startActivityForResult(intent, PICK_COLOR_REQUEST);
                     mDrawerLayout.closeDrawer(mDrawerList);
+                }
+                if (position == 2) {
+                    Intent intent = new Intent(getApplication(), AboutActivity.class);
+
+                    startActivity(intent);
                 }
                 else {
                     Toast.makeText(getApplicationContext(),"עדיין לא ממומש",Toast.LENGTH_LONG).show();
@@ -285,6 +290,12 @@ public class MainActivity extends AppCompatActivity {
         tarnegolaim.initFamily(birdList);
         BirdsFamilies.zolelanim zolelanim = new BirdsFamilies.zolelanim();
         zolelanim.initFamily(birdList);
+        BirdsFamilies.tavlanim tavlanim = new BirdsFamilies.tavlanim();
+        tavlanim.initFamily(birdList);
+        BirdsFamilies.yasuraim yasuraim = new BirdsFamilies.yasuraim();
+        yasuraim.initFamily(birdList);
+        BirdsFamilies.avazaim avazaim = new BirdsFamilies.avazaim();
+        avazaim.initFamily(birdList);
         familiesSwitch=false;
     }
     @Override
